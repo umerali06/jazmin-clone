@@ -7,6 +7,11 @@ import {
   faShoppingCart,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import logo from "../assets/logo.png"; // Ensure this path is correct
 
 const Header = () => {
@@ -84,7 +89,9 @@ const Header = () => {
             <FontAwesomeIcon icon={faTimes} size="lg" />
           </button>
           <nav className="mt-8">
-            <ul className="space-y-4">
+            <ul className="space-y-6">
+              {" "}
+              {/* Increased space between links */}
               <li className="border-b">
                 <a href="#sale" className="text-gray-800 block py-2">
                   Sale
@@ -124,15 +131,15 @@ const Header = () => {
               <li className="mt-8">
                 <div className="flex space-x-4">
                   <FontAwesomeIcon
-                    icon={["fab", "facebook"]}
+                    icon={faFacebook}
                     className="text-gray-600 hover:text-gray-900 cursor-pointer"
                   />
                   <FontAwesomeIcon
-                    icon={["fab", "instagram"]}
+                    icon={faInstagram}
                     className="text-gray-600 hover:text-gray-900 cursor-pointer"
                   />
                   <FontAwesomeIcon
-                    icon={["fab", "twitter"]}
+                    icon={faTwitter}
                     className="text-gray-600 hover:text-gray-900 cursor-pointer"
                   />
                 </div>
