@@ -12,13 +12,12 @@ const SubscribeSection = () => {
           <p className="text-gray-300 font-semibold mb-4">
             Get Latest News & Exclusive Offers
           </p>
-          <div className="flex flex-col md:flex-row items-center justify-center">
+          <div className="flex flex-col md:flex-row items-center justify-center md:space-x-2">
             <input
               type="email"
               placeholder="E-mail"
-              className="py-3 px-4 mb-2 md:mb-0 md:mr-2 border border-gray-300 bg-transparent rounded-none focus:outline-none text-gray-200"
+              className="py-3 px-4 mb-2 md:mb-0 border border-gray-300 bg-transparent text-gray-200 focus:outline-none"
               style={{
-                minWidth: "250px",
                 width: "100%",
                 maxWidth: "320px",
                 borderRadius: "0.25rem",
@@ -27,7 +26,7 @@ const SubscribeSection = () => {
             <button
               className="bg-white text-gray-800 py-3 px-6 rounded-none hover:bg-gray-200 transition-colors duration-300 ease-in-out font-semibold"
               style={{
-                minWidth: "250px",
+                width: "100%",
                 maxWidth: "320px",
                 borderRadius: "0.25rem",
               }}
