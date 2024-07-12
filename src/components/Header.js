@@ -12,7 +12,9 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import logo from "../assets/logo.png"; // Ensure this path is correct
+
+const logoWhite = "../assets/whitelogo.png";
+const logoBlack = "../assets/logo.png"; // Ensure this path is correct
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,14 +49,15 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <button
-          onClick={toggleMenu}
-          className={`${isScrolled ? "text-black" : "text-white"}`}
-        >
+        <button onClick={toggleMenu} className={`${isScrolled ? "text-black" : "text-white"}`}>
           <FontAwesomeIcon icon={faBars} size="lg" />
         </button>
         <div className="flex-grow text-center">
-          <img src={logo} alt="Jazmin" className="h-8 inline" />
+          <img
+            src={isScrolled ? logoBlack : logoWhite}
+            alt="Jazmin"
+            className="h-8 inline"
+          />
         </div>
         <div className="flex items-center space-x-4">
           <select
@@ -67,31 +70,24 @@ const Header = () => {
             <option value="PKR">PKR</option>
             <option value="USD">USD</option>
             <option value="GBP">GBP</option>
-            <option value="CAD">CAD</option>
-            <option value="EUR">EUR</option>
+            <option value="CAD">CAD</            <option value="EUR">EUR</option>
           </select>
           <FontAwesomeIcon
             icon={faUser}
             className={`hidden md:block cursor-pointer ${
-              isScrolled
-                ? "text-gray-800 hover:text-gray-900"
-                : "text-white hover:text-gray-300"
+              isScrolled ? "text-gray-800 hover:text-gray-900" : "text-white hover:text-gray-300"
             }`}
           />
           <FontAwesomeIcon
             icon={faSearch}
             className={`cursor-pointer ${
-              isScrolled
-                ? "text-gray-800 hover:text-gray-900"
-                : "text-white hover:text-gray-300"
+              isScrolled ? "text-gray-800 hover:text-gray-900" : "text-white hover:text-gray-300"
             }`}
           />
           <FontAwesomeIcon
             icon={faShoppingCart}
             className={`cursor-pointer ${
-              isScrolled
-                ? "text-gray-800 hover:text-gray-900"
-                : "text-white hover:text-gray-300"
+              isScrolled ? "text-gray-800 hover:text-gray-900" : "text-white hover:text-gray-300"
             }`}
           />
         </div>
