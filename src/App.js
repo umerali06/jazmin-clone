@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import "./index.css"; // Ensure Tailwind CSS is imported
+import Hero from "./components/Hero";
+import CardContainer from "./components/CardContainer";
+import SubscribeSection from "./components/SubscribeSection";
+import VideoCardContainer from "./components/VideoCardContainer";
+import TrendingProducts from "./components/TrendingProducts";
+import Footer from "./components/Footer";
+import SwiperSection from "./components/SwiperSection";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Hero />
+      <CardContainer />
+      <SubscribeSection />
+      <VideoCardContainer />
+      <TrendingProducts />
+      <SwiperSection />
+      <Footer />
+      {/* Other components will go here */}
     </div>
   );
 }
