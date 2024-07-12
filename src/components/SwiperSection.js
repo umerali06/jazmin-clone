@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "./SwiperSection.css"; // Import custom CSS for additional styles
 
 const swiperContent = [
   {
@@ -54,7 +55,7 @@ const DotSwiper = ({ dots }) => {
       <img
         src={currentImage}
         alt="Small Swiper Image"
-        className="w-full object-center object-cover"
+        className="w-full object-center object-contain rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
       />
       <div className="flex justify-center mt-2">
         {dots.map((dot, index) => (
@@ -71,9 +72,7 @@ const DotSwiper = ({ dots }) => {
 
 const SwiperSection = () => {
   return (
-    <div className="w-full h-screen p-4 object-center object-cover">
-      {" "}
-      {/* Added padding to the section */}
+    <div className="w-full h-screen p-4">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
@@ -86,15 +85,11 @@ const SwiperSection = () => {
         {swiperContent.map((content, index) => (
           <SwiperSlide key={index}>
             <div className="flex flex-col md:flex-row h-full p-4">
-              {" "}
-              {/* Added padding to the container */}
               <div className="md:w-2/3 p-2">
-                {" "}
-                {/* Added padding and adjusted width */}
                 <img
                   src={content.largeImg}
                   alt="Large Swiper Image"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <div className="md:w-1/3 flex flex-col justify-between p-4">
@@ -106,7 +101,7 @@ const SwiperSection = () => {
                   <div className="v-stack justify-items-center gap-1">
                     <a
                       href={content.smallImgs[0].product.link}
-                      className="product-title h6"
+                      className="product-title h6 text-blue-600 hover:underline"
                     >
                       {content.smallImgs[0].product.title}
                     </a>

@@ -1,0 +1,17 @@
+/* SwiperSection.css */
+img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+  }
+  
+  .swiper-slide {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .swiper-slide:hover {
+    transform: scale(1.02);
+  }
+  
