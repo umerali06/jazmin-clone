@@ -47,7 +47,10 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <button onClick={toggleMenu} className="text-gray-600">
+        <button
+          onClick={toggleMenu}
+          className={`${isScrolled ? "text-black" : "text-white"}`}
+        >
           <FontAwesomeIcon icon={faBars} size="lg" />
         </button>
         <div className="flex-grow text-center">
@@ -57,7 +60,9 @@ const Header = () => {
           <select
             value={currency}
             onChange={(e) => setCurrency(e.target.value)}
-            className="hidden md:block bg-transparent text-gray-600 border-none focus:outline-none"
+            className={`hidden md:block bg-transparent border-none focus:outline-none ${
+              isScrolled ? "text-gray-800" : "text-white"
+            }`}
           >
             <option value="PKR">PKR</option>
             <option value="USD">USD</option>
@@ -67,15 +72,27 @@ const Header = () => {
           </select>
           <FontAwesomeIcon
             icon={faUser}
-            className="hidden md:block text-gray-600 hover:text-gray-900 cursor-pointer"
+            className={`hidden md:block cursor-pointer ${
+              isScrolled
+                ? "text-gray-800 hover:text-gray-900"
+                : "text-white hover:text-gray-300"
+            }`}
           />
           <FontAwesomeIcon
             icon={faSearch}
-            className="text-gray-600 hover:text-gray-900 cursor-pointer"
+            className={`cursor-pointer ${
+              isScrolled
+                ? "text-gray-800 hover:text-gray-900"
+                : "text-white hover:text-gray-300"
+            }`}
           />
           <FontAwesomeIcon
             icon={faShoppingCart}
-            className="text-gray-600 hover:text-gray-900 cursor-pointer"
+            className={`cursor-pointer ${
+              isScrolled
+                ? "text-gray-800 hover:text-gray-900"
+                : "text-white hover:text-gray-300"
+            }`}
           />
         </div>
       </div>
